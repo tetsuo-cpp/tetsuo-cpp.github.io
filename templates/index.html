@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block body_attrs %} class="h-card vcard"{% endblock %}
+
+{% block title_class %} p-name fn{% endblock %}
+
+{% block main -%}
+  <main id="content">
+    <div>
+      {{ section.content | safe -}}
+    </div>
+    <section>
+      <h2>Latest Posts</h2>
+      <ul class="h-feed">
+        {%- set section = get_section(path="post/_index.md") %}
+        {%- for page in section.pages | slice(end=3) %}
+          <li class="h-entry">
+            <time class="dt-published" datetime="{{ page.date | date(format="%+") }}">{{ page.date | date(format=config.extra.date_format) }}</time>
+            <a class="u-url p-name" href="{{ page.path | safe }}">{{ page.title }}</a>
+          </li>
+        {%- endfor %}
+      </ul>
+    </section>
+    <section>
+      <h2>Contact</h2>
+      <ul>
+        {%- for item in config.extra.contact_menu %}
+          <li>
+            {%- if item.url is starting_with("mailto:") -%}
+              <a href="{{ item.url | safe }}" class="u-email email" rel="me">{{ item.name }}</a>
+            {%- else -%}
+              <a href="{{ item.url | safe }}" class="u-url url" rel="me">{{ item.name }}</a>
+            {%- endif -%}
+          </li>
+        {%- endfor %}
+      </ul>
+    </section>
+  </main>
+{% endblock %}

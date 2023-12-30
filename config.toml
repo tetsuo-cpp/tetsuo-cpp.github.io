@@ -1,0 +1,36 @@
+# The URL the site will be built for
+base_url = "https://tetsuo.sh"
+
+# Author details
+title = "Alex Cameron"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = false
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+# Use the Bear Blog theme
+theme = "zola-bearblog"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[[taxonomies]]
+name = "tags"
+feed = true
+
+[extra]
+# Put all your custom variables here
+main_menu = [
+  { name = "Posts", url = "/post/" },
+  { name = "Tags", url = "/tags/ "},
+  { name = "About", url = "/about/" }
+]
+contact_menu = [
+  { name = "asc@tetsuo.sh", url = "mailto:asc@tetsuo.sh" },
+  { name = "GitHub", url = "https://github.com/tetsuo-cpp" },
+  { name = "Mastodon", url = "https://infosec.exchange/@tetsuo_cpp" }
+]
