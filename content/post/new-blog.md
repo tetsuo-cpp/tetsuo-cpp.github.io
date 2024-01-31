@@ -28,7 +28,7 @@ I'd like to be able to describe what makes them tick and how someone would go ab
 
 # Principles
 
-When it comes to learning how to build computer programs, I believe that the most important thing is to be as prolific.
+When it comes to learning how to build computer programs, I believe that the most important thing is to be prolific.
 As I was starting out in the industry, I wasted a lot of time bike-shedding on personal projects and trying to figure out the optimal way to design a given piece of code.
 The reality is that the time I spent didn't improve the code much as I simply **didn't know** how to design software and that, even with unlimited time, I probably wouldn't have arrived at a good solution.
 I'm now of the opinion that it's more important to just churn it out, get as much experience as possible and observe firsthand what works well and what doesn't.
