@@ -13,6 +13,9 @@ build_search_index = false
 # Use the Bear Blog theme
 theme = "zola-bearblog"
 
+# Generate an Atom feed
+generate_feed = true
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
@@ -27,7 +30,8 @@ feed = true
 main_menu = [
   { name = "Posts", url = "/post/" },
   { name = "Tags", url = "/tags/ "},
-  { name = "About", url = "/about/" }
+  { name = "About", url = "/about/" },
+  { name = "Feed", url = "/atom.xml" }
 ]
 contact_menu = [
   { name = "asc@tetsuo.sh", url = "mailto:asc@tetsuo.sh" },
