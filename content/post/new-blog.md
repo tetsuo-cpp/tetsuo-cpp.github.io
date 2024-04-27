@@ -34,7 +34,7 @@ The reality is that the time I spent didn't improve the code much as I simply **
 I'm now of the opinion that it's more important to just churn it out, get as much experience as possible and observe firsthand what works well and what doesn't.
 
 I'm trying to apply this philosophy to writing as well. That is, prioritise writing frequently over obsessing about the form, and be at peace with the fact that my writing won't be great at first.
-My hope is that by writing consistently, producing quality writing will start to feel normal and be part of my modus operandi.
+My hope is that by writing consistently, producing quality writing will start to feel normal and become part of my modus operandi.
 
 Another principle that I want to stick to is to write in an approachable way that is understandable by the working programmer.
 One of the difficulties I had learning about compilers was that most learning materials are couched in academic language.
