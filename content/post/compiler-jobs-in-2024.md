@@ -1,5 +1,5 @@
 +++
-date = 2024-02-04
+date = 2024-04-27
 title = "What does a compiler job look like in the year 2024?"
 authors = ["Alex Cameron"]
 [taxonomies]
