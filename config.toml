@@ -36,5 +36,4 @@ main_menu = [
 contact_menu = [
   { name = "asc@tetsuo.sh", url = "mailto:asc@tetsuo.sh" },
   { name = "GitHub", url = "https://github.com/tetsuo-cpp" },
-  { name = "Mastodon", url = "https://infosec.exchange/@tetsuo_cpp" }
 ]
