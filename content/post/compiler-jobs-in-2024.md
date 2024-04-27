@@ -11,7 +11,8 @@ While those jobs do exist, they make up just one slice of the pie that is the co
 
 There are resources out there listing companies that do compiler work (namely the invaluable [Compiler Jobs](https://mgaudet.github.io/CompilerJobs/) page), however I thought it'd be useful to write up a post talking about what **types** of roles are out there.
 
-In this post, I'm necessarily talking about parts of the industry that are outside of my own personal experience. If you feel that I've omitted or mischaracterised something, shoot me an email and I'll fix it.
+In this post, I'm necessarily talking about parts of the industry that are outside of my own personal experience.
+If you feel that I've omitted or mischaracterised something, shoot me an email and I'll fix it.
 
 # General purpose programming languages
 
@@ -109,9 +110,11 @@ There's a certain school of thought that believes that the most efficient way to
 The most widespread example of that is SQL!
 These small languages or *DSLs* are used for everything from querying databases to scripting game engines.
 
-Database query languages are a particularly interesting example as, internally, most database systems contain a query compiler that performs optimisations to the query and outputs a *query plan* that outlines how to access and transform data in an efficient way. If you squint a bit, this looks a lot like traditional compiler optimisation.
+Database query languages are a particularly interesting example as, internally, most database systems contain a query compiler that performs optimisations to the query and outputs a *query plan* that outlines how to access and transform data in an efficient way.
+If you squint a bit, this looks a lot like traditional compiler optimisation.
 
-This category is a bit of a catch-all as a lot of these use-cases don't have much in common but the point is that small specialised languages exist **everywhere**. I've expanded on the examples below just to give you an example of just how diverse this category is.
+This category is a bit of a catch-all as a lot of these use-cases don't have much in common but the point is that small specialised languages exist **everywhere**.
+I've expanded on the examples below just to give you an example of just how diverse this category is.
 
 Examples:
 * [Roblox](https://www.roblox.com/): Building a Lua variant called [Luau](https://luau-lang.org/) for scripting the Roblox game engine.
