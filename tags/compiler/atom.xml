@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Alex Cameron - compiler</title>
+    <link rel="self" type="application/atom+xml" href="https://tetsuo.sh/tags/compiler/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://tetsuo.sh"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-04-27T00:00:00+00:00</updated>
+    <id>https://tetsuo.sh/tags/compiler/atom.xml</id>
+    <entry xml:lang="en">
+        <title>What does a compiler job look like in the year 2024?</title>
+        <published>2024-04-27T00:00:00+00:00</published>
+        <updated>2024-04-27T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Alex Cameron
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tetsuo.sh/post/compiler-jobs-in-2024/"/>
+        <id>https://tetsuo.sh/post/compiler-jobs-in-2024/</id>
+        
+        <content type="html" xml:base="https://tetsuo.sh/post/compiler-jobs-in-2024/">&lt;p&gt;When people think about compiler development, they usually imagine a job working on a general purpose compiler&#x2F;runtime that they use in their day-to-day work such as Clang or V8.
+While those jobs do exist, they make up just one slice of the pie that is the compiler job market.&lt;&#x2F;p&gt;
+&lt;p&gt;There are resources out there listing companies that do compiler work (namely the invaluable &lt;a href=&quot;https:&#x2F;&#x2F;mgaudet.github.io&#x2F;CompilerJobs&#x2F;&quot;&gt;Compiler Jobs&lt;&#x2F;a&gt; page), however I thought it&#x27;d be useful to write up a post talking about what &lt;strong&gt;types&lt;&#x2F;strong&gt; of roles are out there.&lt;&#x2F;p&gt;
+&lt;p&gt;In this post, I&#x27;m necessarily talking about parts of the industry that are outside of my own personal experience.
+If you feel that I&#x27;ve omitted or mischaracterised something, shoot me an email and I&#x27;ll fix it.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;general-purpose-programming-languages&quot;&gt;General purpose programming languages&lt;&#x2F;h1&gt;
+&lt;p&gt;These are the technologies that we mentioned earlier.
+Think compilers and runtimes for C++, Java, JavaScript, Python, etc.
+I&#x27;d put compiler infrastructure such as &lt;a href=&quot;https:&#x2F;&#x2F;llvm.org&#x2F;&quot;&gt;LLVM&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;cranelift.dev&#x2F;&quot;&gt;Cranelift&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;www.graalvm.org&#x2F;latest&#x2F;graalvm-as-a-platform&#x2F;language-implementation-framework&#x2F;&quot;&gt;GraalVM Truffle&lt;&#x2F;a&gt; under this category too.&lt;&#x2F;p&gt;
+&lt;p&gt;Toolchains for general purpose programming languages are, generally speaking, not directly monetisable.
+This means that this type of development is usually part of a broader company strategy and, with a few exceptions, tends to be the domain of larger companies that have a heavy investment in a particular language&#x2F;stack and want to represent their interests in the open-source community.&lt;&#x2F;p&gt;
+&lt;p&gt;One way to get an idea of what companies hire contributors is to clone one of these projects and see what corporate emails turn up in &lt;code&gt;git log&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Examples:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Google, Apple, Microsoft, et al&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.redhat.com&#x2F;&quot;&gt;Red Hat&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.mozilla.org&#x2F;&quot;&gt;Mozilla&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.igalia.com&#x2F;technology&#x2F;compilers&quot;&gt;Igalia&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;embedded&quot;&gt;Embedded&lt;&#x2F;h1&gt;
+&lt;p&gt;There are a number of companies developing specialised compiler toolchains for embedded applications.
+For the most part, these are C&#x2F;C++ compilers although Pascal and Ada do exist.&lt;&#x2F;p&gt;
+&lt;p&gt;These compilers are often from the hardware vendors themselves and come with an IDE, build system, etc.
+There are also third-party toolchains that have a focus on code size optimisation or are formally certified in some way to justify their pricetag over the hardware vendor&#x27;s toolchain or open-source alternatives like GCC.
+Interestingly, this is one niche where the practice of selling compiler licenses still thrives.&lt;&#x2F;p&gt;
+&lt;p&gt;Examples:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.arm.com&#x2F;&quot;&gt;ARM&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.qualcomm.com&#x2F;&quot;&gt;Qualcomm&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.ghs.com&#x2F;&quot;&gt;Green Hills Software&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.adacore.com&#x2F;&quot;&gt;AdaCore&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.segger.com&#x2F;&quot;&gt;SEGGER&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;hardware-accelerators&quot;&gt;Hardware accelerators&lt;&#x2F;h1&gt;
+&lt;p&gt;With improvements in processor performance diminishing in recent years, there&#x27;s an incentive to develop &lt;em&gt;domain specific hardware&lt;&#x2F;em&gt; that is designed to tackle certain applications more efficiently.
+Chris Lattner did a great talk on this topic &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=4HgShra-KnY&quot;&gt;here&lt;&#x2F;a&gt;.
+The development of new hardware and &lt;abbr title=&quot;Instruction Set Architecture&quot;&gt;ISA&lt;&#x2F;abbr&gt;s necessitates new compilers to target them.&lt;&#x2F;p&gt;
+&lt;p&gt;The most common application is machine learning.
+These compilers are unusual in that they often don&#x27;t have a source language in the conventional sense as they&#x27;re trying to lower ML models (Tensorflow, PyTorch, ONNX, etc) to hardware.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ll go ahead and throw GPU compiler stacks such as NVIDIA&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;developer.nvidia.com&#x2F;cuda-toolkit&quot;&gt;CUDA&lt;&#x2F;a&gt; and AMD&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;www.amd.com&#x2F;en&#x2F;products&#x2F;software&#x2F;rocm.html&quot;&gt;ROCm&lt;&#x2F;a&gt; under this category too as they share some similarities.&lt;&#x2F;p&gt;
+&lt;p&gt;Examples:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cloud.google.com&#x2F;tpu&quot;&gt;Google TPU&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;aws.amazon.com&#x2F;machine-learning&#x2F;inferentia&#x2F;&quot;&gt;Amazon Inferentia&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;groq.com&#x2F;&quot;&gt;Groq&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tenstorrent.com&#x2F;&quot;&gt;Tenstorrent&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.fabriccryptography.com&#x2F;&quot;&gt;Fabric Cryptography&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;web3&quot;&gt;Web3&lt;&#x2F;h1&gt;
+&lt;p&gt;There are a number of companies in the Web3 space that are developing programming languages for writing smart contracts and &lt;abbr title=&quot;Decentralised Applications&quot;&gt;dApps&lt;&#x2F;abbr&gt;.
+The most widespread of these is &lt;a href=&quot;https:&#x2F;&#x2F;soliditylang.org&#x2F;&quot;&gt;Solidity&lt;&#x2F;a&gt;, a language designed to target the Ethereum network&#x27;s &lt;abbr title=&quot;Ethereum Virtual Machine&quot;&gt;EVM&lt;&#x2F;abbr&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Since the introduction of the EVM, there have been a growing number of networks with their own virtual machines, smart contract languages, toolchains, etc.&lt;&#x2F;p&gt;
+&lt;p&gt;Examples:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;solana.com&#x2F;&quot;&gt;Solana&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dfinity.org&#x2F;&quot;&gt;DFINITY&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;aleo.org&#x2F;&quot;&gt;Aleo&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;static-analysis&quot;&gt;Static analysis&lt;&#x2F;h1&gt;
+&lt;p&gt;There are a number of companies with a &lt;abbr title=&quot;Software as a Service&quot;&gt;SaaS&lt;&#x2F;abbr&gt; offering for statically analysing code.
+These often come as part of a larger suite of security-focused tools.&lt;&#x2F;p&gt;
+&lt;p&gt;Unlike the basic static analysis implemented in most compilers, these dedicated tools usually have cross-language support and provide more in-depth analysis such as: detecting security vulnerabilities (e.g. SQL injection), checking code quality or adherence to style guides, and analysis that would be too intensive to run as part of a developer&#x27;s edit-compile-run workflow.&lt;&#x2F;p&gt;
+&lt;p&gt;Most of these tools are heavily customisable and in the case of CodeQL, can be extended with a query language.&lt;&#x2F;p&gt;
+&lt;p&gt;Examples:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;scan.coverity.com&#x2F;&quot;&gt;Synopsys Coverity&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.perforce.com&#x2F;products&#x2F;klocwork&quot;&gt;Perforce Klocwork&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;snyk.io&#x2F;&quot;&gt;Snyk&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;codeql.github.com&#x2F;&quot;&gt;GitHub CodeQL&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.praetorian.com&#x2F;&quot;&gt;Praetorian&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;security-research&quot;&gt;Security research&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.darpa.mil&#x2F;&quot;&gt;DARPA&lt;&#x2F;a&gt; funds a lot of security research that involves compiler-adjacent problems such as: program analysis, decompilation, binary patching, etc.&lt;&#x2F;p&gt;
+&lt;p&gt;These projects are a blend of academia and industry as they are often about validating novel ideas and producing proof-of-concepts to pave the way for further research rather than building industry-grade implementations.&lt;&#x2F;p&gt;
+&lt;p&gt;Examples:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.trailofbits.com&#x2F;&quot;&gt;Trail of Bits&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;galois.com&#x2F;&quot;&gt;Galois&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.grammatech.com&#x2F;&quot;&gt;GrammaTech&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;domain-specific-languages&quot;&gt;Domain specific languages&lt;&#x2F;h1&gt;
+&lt;p&gt;There&#x27;s a certain school of thought that believes that the most efficient way to solve a problem is to write a specialised language for a given domain.
+The most widespread example of that is SQL!
+These small languages or &lt;em&gt;DSLs&lt;&#x2F;em&gt; are used for everything from querying databases to scripting game engines.&lt;&#x2F;p&gt;
+&lt;p&gt;Database query languages are a particularly interesting example as, internally, most database systems contain a query compiler that performs optimisations to the query and outputs a &lt;em&gt;query plan&lt;&#x2F;em&gt; that outlines how to access and transform data in an efficient way.
+If you squint a bit, this looks a lot like traditional compiler optimisation.&lt;&#x2F;p&gt;
+&lt;p&gt;This category is a bit of a catch-all as a lot of these use-cases don&#x27;t have much in common but the point is that these small specialised languages exist &lt;strong&gt;everywhere&lt;&#x2F;strong&gt;.
+I&#x27;ve expanded on the examples below to give you a sense of just how diverse this category is.&lt;&#x2F;p&gt;
+&lt;p&gt;Examples:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.roblox.com&#x2F;&quot;&gt;Roblox&lt;&#x2F;a&gt;: Building a Lua variant called &lt;a href=&quot;https:&#x2F;&#x2F;luau-lang.org&#x2F;&quot;&gt;Luau&lt;&#x2F;a&gt; for scripting the Roblox game engine.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.snowflake.com&#x2F;en&#x2F;&quot;&gt;Snowflake&lt;&#x2F;a&gt;: Building a query compiler for the Snowflake SQL Engine.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lokad.com&#x2F;&quot;&gt;Lokad&lt;&#x2F;a&gt;: Building a DSL for representing supply chain optimisation problems.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.workday.com&#x2F;&quot;&gt;Workday&lt;&#x2F;a&gt;: Building in-house proprietary programming languages for development of the Workday platform.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>

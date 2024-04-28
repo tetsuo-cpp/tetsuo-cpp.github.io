@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What does a compiler job look like in the year 2024? | Alex Cameron</title>
+  <meta name="title" content="What does a compiler job look like in the year 2024?">
+
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="alternate" type="application/atom+xml" title="Alex Cameron" href="https://tetsuo.sh/atom.xml">
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  input {
+    font-size: 1rem;
+  }
+
+  main,article {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 0.875rem;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+  /* blog posts */
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+</head>
+<body>
+  <header>
+  <a href="https:&#x2F;&#x2F;tetsuo.sh" class="title">
+    <h2>Alex Cameron</h2>
+  </a>
+  <nav>
+    <a href="https:&#x2F;&#x2F;tetsuo.sh">Home</a>
+      <a href="https://tetsuo.sh/post">Posts</a>
+      <a href="https://tetsuo.sh/tags/ ">Tags</a>
+      <a href="https://tetsuo.sh/about">About</a>
+      <a href="https://tetsuo.sh/atom.xml">Feed</a>
+  </nav>
+</header>
+
+    <h1>What does a compiler job look like in the year 2024?</h1>
+      <p>
+        <i>
+          <time datetime='2024-04-27T00:00:00+00:00' pubdate>27 Apr, 2024</time>
+        </i>
+      </p>
+  <main>
+    <p>When people think about compiler development, they usually imagine a job working on a general purpose compiler/runtime that they use in their day-to-day work such as Clang or V8.
+While those jobs do exist, they make up just one slice of the pie that is the compiler job market.</p>
+<p>There are resources out there listing companies that do compiler work (namely the invaluable <a href="https://mgaudet.github.io/CompilerJobs/">Compiler Jobs</a> page), however I thought it'd be useful to write up a post talking about what <strong>types</strong> of roles are out there.</p>
+<p>In this post, I'm necessarily talking about parts of the industry that are outside of my own personal experience.
+If you feel that I've omitted or mischaracterised something, shoot me an email and I'll fix it.</p>
+<h1 id="general-purpose-programming-languages">General purpose programming languages</h1>
+<p>These are the technologies that we mentioned earlier.
+Think compilers and runtimes for C++, Java, JavaScript, Python, etc.
+I'd put compiler infrastructure such as <a href="https://llvm.org/">LLVM</a>, <a href="https://cranelift.dev/">Cranelift</a> and <a href="https://www.graalvm.org/latest/graalvm-as-a-platform/language-implementation-framework/">GraalVM Truffle</a> under this category too.</p>
+<p>Toolchains for general purpose programming languages are, generally speaking, not directly monetisable.
+This means that this type of development is usually part of a broader company strategy and, with a few exceptions, tends to be the domain of larger companies that have a heavy investment in a particular language/stack and want to represent their interests in the open-source community.</p>
+<p>One way to get an idea of what companies hire contributors is to clone one of these projects and see what corporate emails turn up in <code>git log</code>.</p>
+<p>Examples:</p>
+<ul>
+<li>Google, Apple, Microsoft, et al</li>
+<li><a href="https://www.redhat.com/">Red Hat</a></li>
+<li><a href="https://www.mozilla.org/">Mozilla</a></li>
+<li><a href="https://www.igalia.com/technology/compilers">Igalia</a></li>
+</ul>
+<h1 id="embedded">Embedded</h1>
+<p>There are a number of companies developing specialised compiler toolchains for embedded applications.
+For the most part, these are C/C++ compilers although Pascal and Ada do exist.</p>
+<p>These compilers are often from the hardware vendors themselves and come with an IDE, build system, etc.
+There are also third-party toolchains that have a focus on code size optimisation or are formally certified in some way to justify their pricetag over the hardware vendor's toolchain or open-source alternatives like GCC.
+Interestingly, this is one niche where the practice of selling compiler licenses still thrives.</p>
+<p>Examples:</p>
+<ul>
+<li><a href="https://www.arm.com/">ARM</a></li>
+<li><a href="https://www.qualcomm.com/">Qualcomm</a></li>
+<li><a href="https://www.ghs.com/">Green Hills Software</a></li>
+<li><a href="https://www.adacore.com/">AdaCore</a></li>
+<li><a href="https://www.segger.com/">SEGGER</a></li>
+</ul>
+<h1 id="hardware-accelerators">Hardware accelerators</h1>
+<p>With improvements in processor performance diminishing in recent years, there's an incentive to develop <em>domain specific hardware</em> that is designed to tackle certain applications more efficiently.
+Chris Lattner did a great talk on this topic <a href="https://www.youtube.com/watch?v=4HgShra-KnY">here</a>.
+The development of new hardware and <abbr title="Instruction Set Architecture">ISA</abbr>s necessitates new compilers to target them.</p>
+<p>The most common application is machine learning.
+These compilers are unusual in that they often don't have a source language in the conventional sense as they're trying to lower ML models (Tensorflow, PyTorch, ONNX, etc) to hardware.</p>
+<p>I'll go ahead and throw GPU compiler stacks such as NVIDIA's <a href="https://developer.nvidia.com/cuda-toolkit">CUDA</a> and AMD's <a href="https://www.amd.com/en/products/software/rocm.html">ROCm</a> under this category too as they share some similarities.</p>
+<p>Examples:</p>
+<ul>
+<li><a href="https://cloud.google.com/tpu">Google TPU</a></li>
+<li><a href="https://aws.amazon.com/machine-learning/inferentia/">Amazon Inferentia</a></li>
+<li><a href="https://groq.com/">Groq</a></li>
+<li><a href="https://tenstorrent.com/">Tenstorrent</a></li>
+<li><a href="https://www.fabriccryptography.com/">Fabric Cryptography</a></li>
+</ul>
+<h1 id="web3">Web3</h1>
+<p>There are a number of companies in the Web3 space that are developing programming languages for writing smart contracts and <abbr title="Decentralised Applications">dApps</abbr>.
+The most widespread of these is <a href="https://soliditylang.org/">Solidity</a>, a language designed to target the Ethereum network's <abbr title="Ethereum Virtual Machine">EVM</abbr>.</p>
+<p>Since the introduction of the EVM, there have been a growing number of networks with their own virtual machines, smart contract languages, toolchains, etc.</p>
+<p>Examples:</p>
+<ul>
+<li><a href="https://solana.com/">Solana</a></li>
+<li><a href="https://dfinity.org/">DFINITY</a></li>
+<li><a href="https://aleo.org/">Aleo</a></li>
+</ul>
+<h1 id="static-analysis">Static analysis</h1>
+<p>There are a number of companies with a <abbr title="Software as a Service">SaaS</abbr> offering for statically analysing code.
+These often come as part of a larger suite of security-focused tools.</p>
+<p>Unlike the basic static analysis implemented in most compilers, these dedicated tools usually have cross-language support and provide more in-depth analysis such as: detecting security vulnerabilities (e.g. SQL injection), checking code quality or adherence to style guides, and analysis that would be too intensive to run as part of a developer's edit-compile-run workflow.</p>
+<p>Most of these tools are heavily customisable and in the case of CodeQL, can be extended with a query language.</p>
+<p>Examples:</p>
+<ul>
+<li><a href="https://scan.coverity.com/">Synopsys Coverity</a></li>
+<li><a href="https://www.perforce.com/products/klocwork">Perforce Klocwork</a></li>
+<li><a href="https://snyk.io/">Snyk</a></li>
+<li><a href="https://codeql.github.com/">GitHub CodeQL</a></li>
+<li><a href="https://www.praetorian.com/">Praetorian</a></li>
+</ul>
+<h1 id="security-research">Security research</h1>
+<p><a href="https://www.darpa.mil/">DARPA</a> funds a lot of security research that involves compiler-adjacent problems such as: program analysis, decompilation, binary patching, etc.</p>
+<p>These projects are a blend of academia and industry as they are often about validating novel ideas and producing proof-of-concepts to pave the way for further research rather than building industry-grade implementations.</p>
+<p>Examples:</p>
+<ul>
+<li><a href="https://www.trailofbits.com/">Trail of Bits</a></li>
+<li><a href="https://galois.com/">Galois</a></li>
+<li><a href="https://www.grammatech.com/">GrammaTech</a></li>
+</ul>
+<h1 id="domain-specific-languages">Domain specific languages</h1>
+<p>There's a certain school of thought that believes that the most efficient way to solve a problem is to write a specialised language for a given domain.
+The most widespread example of that is SQL!
+These small languages or <em>DSLs</em> are used for everything from querying databases to scripting game engines.</p>
+<p>Database query languages are a particularly interesting example as, internally, most database systems contain a query compiler that performs optimisations to the query and outputs a <em>query plan</em> that outlines how to access and transform data in an efficient way.
+If you squint a bit, this looks a lot like traditional compiler optimisation.</p>
+<p>This category is a bit of a catch-all as a lot of these use-cases don't have much in common but the point is that these small specialised languages exist <strong>everywhere</strong>.
+I've expanded on the examples below to give you a sense of just how diverse this category is.</p>
+<p>Examples:</p>
+<ul>
+<li><a href="https://www.roblox.com/">Roblox</a>: Building a Lua variant called <a href="https://luau-lang.org/">Luau</a> for scripting the Roblox game engine.</li>
+<li><a href="https://www.snowflake.com/en/">Snowflake</a>: Building a query compiler for the Snowflake SQL Engine.</li>
+<li><a href="https://www.lokad.com/">Lokad</a>: Building a DSL for representing supply chain optimisation problems.</li>
+<li><a href="https://www.workday.com/">Workday</a>: Building in-house proprietary programming languages for development of the Workday platform.</li>
+</ul>
+
+  </main>
+  <p>
+        Tags:
+          <a href="https://tetsuo.sh/tags/compiler/">#compiler</a>
+          <a href="https://tetsuo.sh/tags/industry/">#industry</a>
+  </p>
+<footer>
+    Made with <a href="https://codeberg.org/alanpearce/zola-bearblog">Zola ʕ•ᴥ•ʔ Bear</a>
+</footer>
+</body>
+</html>
