@@ -6,7 +6,7 @@ authors = ["Alex Cameron"]
 tags = ["compiler", "industry"]
 +++
 
-When people think of a job developing compilers, they usually imagine a job working on a general purpose compiler/runtime that they use in their day-to-day work such as Clang or V8.
+When people think about compiler development, they usually imagine a job working on a general purpose compiler/runtime that they use in their day-to-day work such as Clang or V8.
 While those jobs do exist, they make up just one slice of the pie that is the compiler job market.
 
 There are resources out there listing companies that do compiler work (namely the invaluable [Compiler Jobs](https://mgaudet.github.io/CompilerJobs/) page), however I thought it'd be useful to write up a post talking about what **types** of roles are out there.
@@ -16,7 +16,7 @@ If you feel that I've omitted or mischaracterised something, shoot me an email a
 
 # General purpose programming languages
 
-These are the technologies that everyone thinks about when we talk about compilers and runtimes.
+These are the technologies that we mentioned earlier.
 Think compilers and runtimes for C++, Java, JavaScript, Python, etc.
 I'd put compiler infrastructure such as [LLVM](https://llvm.org/), [Cranelift](https://cranelift.dev/) and [GraalVM Truffle](https://www.graalvm.org/latest/graalvm-as-a-platform/language-implementation-framework/) under this category too.
 
@@ -49,7 +49,7 @@ Examples:
 
 # Hardware accelerators
 
-With improvements in processor performance diminishing in recent years, there's an incentive to develop *domain specific hardware* that is designed to tackle specific applications more efficiently.
+With improvements in processor performance diminishing in recent years, there's an incentive to develop *domain specific hardware* that is designed to tackle certain applications more efficiently.
 Chris Lattner did a great talk on this topic [here](https://www.youtube.com/watch?v=4HgShra-KnY).
 The development of new hardware and <abbr title="Instruction Set Architecture">ISA</abbr>s necessitates new compilers to target them.
 
@@ -70,7 +70,7 @@ Examples:
 There are a number of companies in the Web3 space that are developing programming languages for writing smart contracts and <abbr title="Decentralised Applications">dApps</abbr>.
 The most widespread of these is [Solidity](https://soliditylang.org/), a language designed to target the Ethereum network's <abbr title="Ethereum Virtual Machine">EVM</abbr>.
 
-Since the introduction of the EVM, there are have been a growing number of networks with their own virtual machines, smart contract languages, toolchains, etc.
+Since the introduction of the EVM, there have been a growing number of networks with their own virtual machines, smart contract languages, toolchains, etc.
 
 Examples:
 * [Solana](https://solana.com/)
@@ -97,7 +97,7 @@ Examples:
 
 [DARPA](https://www.darpa.mil/) funds a lot of security research that involves compiler-adjacent problems such as: program analysis, decompilation, binary patching, etc.
 
-These projects are a blend of academia and industry as they are often about validating ideas and producing proof-of-concepts to pave the way for further research rather than building industry-grade implementations.
+These projects are a blend of academia and industry as they are often about validating novel ideas and producing proof-of-concepts to pave the way for further research rather than building industry-grade implementations.
 
 Examples:
 * [Trail of Bits](https://www.trailofbits.com/)
@@ -113,8 +113,8 @@ These small languages or *DSLs* are used for everything from querying databases 
 Database query languages are a particularly interesting example as, internally, most database systems contain a query compiler that performs optimisations to the query and outputs a *query plan* that outlines how to access and transform data in an efficient way.
 If you squint a bit, this looks a lot like traditional compiler optimisation.
 
-This category is a bit of a catch-all as a lot of these use-cases don't have much in common but the point is that small specialised languages exist **everywhere**.
-I've expanded on the examples below just to give you a sense of just how diverse this category is.
+This category is a bit of a catch-all as a lot of these use-cases don't have much in common but the point is that these small specialised languages exist **everywhere**.
+I've expanded on the examples below to give you a sense of just how diverse this category is.
 
 Examples:
 * [Roblox](https://www.roblox.com/): Building a Lua variant called [Luau](https://luau-lang.org/) for scripting the Roblox game engine.
