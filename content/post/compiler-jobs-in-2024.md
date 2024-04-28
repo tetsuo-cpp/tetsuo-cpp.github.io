@@ -54,7 +54,7 @@ Chris Lattner did a great talk on this topic [here](https://www.youtube.com/watc
 The development of new hardware and <abbr title="Instruction Set Architecture">ISA</abbr>s necessitates new compilers to target them.
 
 The most common application is machine learning.
-These compilers are unusual in that they often don't have a source language in the conventional sense as they're trying to lower ML models (Tensorflow, PyTorch, ONXX, etc) to hardware.
+These compilers are unusual in that they often don't have a source language in the conventional sense as they're trying to lower ML models (Tensorflow, PyTorch, ONNX, etc) to hardware.
 
 I'll go ahead and throw GPU compiler stacks such as NVIDIA's [CUDA](https://developer.nvidia.com/cuda-toolkit) and AMD's [ROCm](https://www.amd.com/en/products/software/rocm.html) under this category too as they share some similarities.
 
