@@ -114,7 +114,7 @@ Database query languages are a particularly interesting example as, internally, 
 If you squint a bit, this looks a lot like traditional compiler optimisation.
 
 This category is a bit of a catch-all as a lot of these use-cases don't have much in common but the point is that small specialised languages exist **everywhere**.
-I've expanded on the examples below just to give you an example of just how diverse this category is.
+I've expanded on the examples below just to give you a sense of just how diverse this category is.
 
 Examples:
 * [Roblox](https://www.roblox.com/): Building a Lua variant called [Luau](https://luau-lang.org/) for scripting the Roblox game engine.
